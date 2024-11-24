@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech & Hacking Hub</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #fff;
+        }
+        /* Video background styling */
+        .video-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+        /* Overlay for text readability */
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+        header {
+            background-color: rgba(30, 30, 30, 0.8);
+            padding: 15px;
+            text-align: center;
+            color: #ff5722;
+            z-index: 2;
+            position: relative;
+        }
+        nav {
+            background-color: rgba(30, 30, 30, 0.8);
+            padding: 10px;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+        nav a {
+            color: #fff;
+            margin: 10px;
+            text-decoration: none;
+        }
+        .container {
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            position: relative;
+            z-index: 2;
+        }
+        .card {
+            display: inline-block;
+            width: 250px;
+            background-color: rgba(51, 51, 51, 0.9);
+            margin: 10px;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease;
+        }
+        .card:hover {
+            transform: scale(1.05);
+        }
+        .card div {
+            margin-top: 10px;
+            color: #ff5722;
+            font-weight: bold;
+        }
+        .card small {
+            color: #bbb;
+        }
+        footer {
+            background-color: rgba(30, 30, 30, 0.8);
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+            position: relative;
+            z-index: 2;
+        }
+        footer a {
+            color: #ff5722;
+            text-decoration: none;
+        }
+        footer a:hover {
+            color: #e64a19;
+        }
+    </style>
+</head>
+<body>
+    <!-- Video Background -->
+    <video class="video-bg" autoplay muted loop>
+        <source src="emmyhenz.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <!-- Overlay -->
+    <div class="overlay"></div>
+
+<header>
+    <h1>DARK WEB</h1>
+    <p>Your one-stop destination for all hacking courses</p>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="tools.html">Tools</a>
+    <a href="trick.html">Tutorials</a>
+    <a href="forum.html">Forum</a>
+    <a href="news.html">News</a>
+    <a href="dev.html">Dev</a>
+</nav>
+
+<div class="container">
+    <h2>Featured Tech & Hacking Tools</h2>
+
+    <!-- Tech tools added -->
+    <a href="https://www.iplocation.net/" class="card">
+        <div>IP Location Tracker</div>
+        <small>Track any IP Address</small>
+    </a>
+    <a href="https://www.base64decode.org/" class="card">
+        <div>Base64 Decoder</div>
+        <small>Decode Base64 Data</small>
+    </a>
+    <a href="https://render.com" class="card">
+        <div>API Tools</div>
+        <small>Manage your APIs</small>
+    </a>
+    <a href="https://bin-generator.vercel.app" class="card">
+        <div>Bin Generator</div>
+        <small>Bin Generator</small>
+    </a>
+    <a href="https://obf-io.deobfuscate.io/" class="card">
+        <div>Text Decoder</div>
+        <small>Decode Encrypted Text</small>
+    </a>
+    <a href="https://www.kali.org/" class="card">
+        <div>Kali Linux Tools</div>
+        <small>Tools for Hackers</small>
+    </a>
+    <a href="https://f-droid.org/en/packages/com.termux/" class="card">
+        <div>Termux for Android</div>
+        <small>Run Termux on Android</small>
+    </a>
+    <a href="https://www.nmap.org/" class="card">
+        <div>Nmap Scanner</div>
+        <small>Network Scanning</small>
+    </a>
+    <a href="https://www.docker.com/" class="card">
+        <div>Docker</div>
+        <small>Containerized Apps</small>
+    </a>
+    <a href="https://www.virustotal.com/" class="card">
+        <div>VirusTotal</div>
+        <small>File Scanning</small>
+    </a>
+    <a href="https://www.shodan.io/" class="card">
+        <div>Shodan Search</div>
+        <small>Search IoT Devices</small>
+    </a>
+    <a href="https://www.hackertarget.com/" class="card">
+        <div>HackerTarget</div>
+        <small>Network Tools</small>
+    </a>
+
+    <!-- More hacking tools -->
+    <a href="https://www.exploit-db.com/" class="card">
+        <div>Exploit-DB</div>
+        <small>Find Exploits</small>
+    </a>
+    <a href="https://www.mediafire.com/file/watf6hh6jhgx995/GMAIL_WITHOUT_PHONE_NUMBERS_.zip/file" class="card">
+        <div>GMAİL TRİCK</div>
+        <small>Get Free Gmail</small>
+    </a>
+    <a href="https://www.criminalip.io/" class="card">
+        <div>Criminal IP</div>
+        <small>IP Intelligence</small>
+    </a>
+    <a href="https://www.metasploit.com/" class="card">
+        <div>Metasploit</div>
+        <small>Exploit Framework</small>
+    </a>
+    <a href="https://www.hackerone.com/" class="card">
+        <div>HackerOne</div>
+        <small>Bug Bounty Program</small>
+    </a>
+
+    <!-- Social Media Tools -->
+    <a href="https://www.mediafire.com/file/cuq38p75uj0dc1k/TG_Fake_Chat.apk/file" class="card">
+        <div>Fake telegram chat</div>
+        <small>fake tg chat</small>
+    </a>
+    <a href="https://www.mediafire.com/file/e55v8o5ltjzwqg2/base-3.apk/file" class="card">
+        <div>Fake whatsapp</div>
+        <small>fake wa chat</small>
+    </a>
+    <a href="https://www.mediafire.com/file/xd6x8u0s342wryh/Create_Fake_Sms-2.apk/file" class="card">
+        <div>fake sms msg apk</div>
+        <small>Fake sms msg</small>
+    </a>
+
+    <!-- New Tools (as per your request) -->
+    <a href="https://emmyhenz-tech.github.io/CHECK-YOUR-PERSONAL-TY/" class="card">
+        <div>PERSONALITY</div>
+        <small>PERSONALITY</small>
+    </a>
+    <a href="https://emmy-henz-tech.github.io/MOVIE-ZONE/" class="card">
+        <div>MOVIE SITE</div>
+        <small>Apps</small>
+    </a>
+    <a href="https://emmy-henz-tech.github.io/HACK-ZONE-APK/" class="card">
+        <div>hack</div>
+        <small>HACKING TOOLS</small>
+    </a>
+    <a href="https://emmy-henz-tech.github.io/BUG-MENU-/" class="card">
+        <div>BUG SCRIPT</div>
+        <small>BUG SCRIPTS</small>
+    </a>
+    <a href="https://emmy-henz-tech.github.io/PREMIUM-APK/" class="card">
+        <div>PREMIUM APK</div>
+        <small>PREMIUM APKS</small>
+    </a>
+    <a href="https://emmy-henz-tech.github.io/Sports/" class="card">
+        <div>BETTING PREDICTION</div>
+        <small>sporty,1xbet</small>
+    </a>
+    <a href="https://emmy-henz-tech.github.io/Omor/" class="card">
+        <div>dark Tech</div>
+        <small>Tech Resources</small>
+    </a>
+    <a href="https://emn178.github.io/online-tools/sha256.html" class="card">
+        <div>Sha256 Harsh Generator</div>
+        <small>Sha256 Harsh Generator</small>
+    </a>
+    <a href="" class="card">
+        <div>All Premium Apk</div>
+        <small>100 Premium Apks</small>
+    </a>
+    <a href="https://www.mediafire.com/file/75hom8r3h7e7hda/Free_Internet_%25F0%259F%259B%259C_trick_by_SAFI.mp4/file" class="card">
+        <div>Free İnternet</div>
+        <small>free internet trick</small>
+    </a>
+</div>
+
+<!-- MESSAGE OWNER -->
+<div class="contact">
+    <a href="https://t.me/EMMYHENZTECHINFO" class="small-box">
+        <img src="https://i.ibb.co/hdPBhnw/IMG-20241115-WA0014.jpg" alt="Telegram Icon">
+        Telegram
+    </a>
+    <a href="https://whatsapp.com/channel/0029VangYOt96H4JhFarL10C" class="small-box">
+        <img src="https://i.ibb.co/Rhg6K6p/IMG-20241115-WA0015.jpg" alt="WhatsApp Icon">
+        WhatsApp
+    </a>
+    <a href="https://youtube.com/c/EMMYHENZTECH" class="small-box">
+        <img src="https://i.ibb.co/VT1JMVc/IMG-20241115-WA0013.jpg" alt="YouTube Icon">
+        YouTube
+    </a>
+</div>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2024 DARK WEB. All rights reserved.</p>
+    <p>Powered by <a href="https://whatsapp.com/channel/0029VangYOt96H4JhFarL10C">EMMY HENZ</a></p>
+</footer>
+
+</body>
+</html>

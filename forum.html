@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forum - DarkWeb</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #0d1117;
+            color: #c9d1d9;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #161b22;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 3px solid #f0ad4e;
+        }
+        header h1 {
+            color: #f0ad4e;
+            margin: 0;
+        }
+        header p {
+            font-size: 14px;
+            color: #c9d1d9;
+            margin: 5px 0 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #21262d;
+            border: 1px solid #f0ad4e;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(240, 173, 78, 0.5);
+        }
+        .topics {
+            margin-bottom: 20px;
+        }
+        .topic {
+            background-color: #161b22;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #f0ad4e;
+            position: relative;
+        }
+        .topic h3 {
+            margin: 0 0 5px 0;
+            color: #f0ad4e;
+        }
+        .topic p {
+            margin: 5px 0;
+        }
+        .buttons {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        .btn {
+            background-color: #f0ad4e;
+            color: #000;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            text-transform: uppercase;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+        }
+        .btn:hover {
+            background-color: #d48839;
+        }
+        .delete-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #d62828;
+            color: #fff;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 12px;
+            text-transform: uppercase;
+        }
+        .delete-btn:hover {
+            background-color: #a71e1e;
+        }
+        .start-topic {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .admin-notice {
+            color: #c9d1d9;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>DarkWeb Forum</h1>
+    <p>Owned by EMMY HENZ</p>
+</header>
+
+<div class="container">
+    <!-- Topics Section -->
+    <div class="topics">
+        <h2>Current Topics</h2>
+        <div class="topic-list" id="topic-list">
+            <!-- Ethical Hacking Tricks Topic -->
+            <div class="topic">
+                <h3>Ethical Hacking Tricks</h3>
+                <p>Learn the basics of ethical hacking with trusted resources and tools. Get started with penetration testing and enhance your cybersecurity knowledge.</p>
+                <div class="buttons">
+                    <a href="https://www.kali.org/" target="_blank" class="btn">View Tool</a>
+                    <a href="https://www.reddit.com/r/HowToHack/" target="_blank" class="btn">Join Discussion</a>
+                </div>
+                <button class="delete-btn" onclick="deleteTopic(this)">Delete</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Start New Topic -->
+    <div class="start-topic">
+        <button class="btn" onclick="promptAdmin()">Start New Topic</button>
+        <p class="admin-notice">This feature is for admins only.</p>
+    </div>
+</div>
+
+<script>
+    // Admin password
+    const adminPassword = "darkwebadmin";
+
+    // Function to prompt for password
+    function promptAdmin() {
+        const password = prompt("Enter Admin Password:");
+        if (password === adminPassword) {
+            createTopic();
+        } else {
+            alert("Access Denied: Admins Only");
+        }
+    }
+
+    // Function to create a new topic
+    function createTopic() {
+        const topicTitle = prompt("Enter the Topic Title:");
+        const topicContent = prompt("Enter the Topic Content:");
+        const toolURL = prompt("Enter the View Tool URL:");
+        const discussionURL = prompt("Enter the Join Discussion URL:");
+
+        if (topicTitle && topicContent && toolURL && discussionURL) {
+            const topicList = document.getElementById("topic-list");
+
+            // Create a new topic div
+            const newTopic = document.createElement("div");
+            newTopic.classList.add("topic");
+
+            // Add the title, content, and buttons
+            newTopic.innerHTML = `
+                <h3>${topicTitle}</h3>
+                <p>${topicContent}</p>
+                <div class="buttons">
+                    <a href="${toolURL}" target="_blank" class="btn">View Tool</a>
+                    <a href="${discussionURL}" target="_blank" class="btn">Join Discussion</a>
+                </div>
+                <button class="delete-btn" onclick="deleteTopic(this)">Delete</button>
+            `;
+
+            // Append the new topic to the topic list
+            topicList.appendChild(newTopic);
+
+            alert("New topic added successfully!");
+        } else {
+            alert("All fields are required to create a topic.");
+        }
+    }
+
+    // Function to delete a topic
+    function deleteTopic(button) {
+        const password = prompt("Enter Admin Password to Delete:");
+        if (password === adminPassword) {
+            const topic = button.parentElement;
+            topic.remove();
+            alert("Topic deleted successfully!");
+        } else {
+            alert("Access Denied: Admins Only");
+        }
+    }
+</script>
+
+</body>
+</html>

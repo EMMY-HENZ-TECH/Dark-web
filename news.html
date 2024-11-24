@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DarkWeb News</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #0d1117;
+            color: #c9d1d9;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #161b22;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 3px solid transparent;
+            box-shadow: 0 0 15px rgba(240, 173, 78, 0.6);
+        }
+        header h1 {
+            color: #f0ad4e;
+            margin: 0;
+            animation: glowing 2s ease-in-out infinite alternate;
+        }
+        header p {
+            font-size: 14px;
+            color: #c9d1d9;
+        }
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #21262d;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(240, 173, 78, 0.5);
+        }
+        .news-item, .tools-item {
+            margin-bottom: 20px;
+            padding: 15px;
+            border-radius: 5px;
+            background-color: #161b22;
+            border: 1px solid transparent;
+            box-shadow: 0 0 10px rgba(240, 173, 78, 0.5), 0 0 20px rgba(255, 0, 0, 0.8);
+            animation: glowing-border 2s ease-in-out infinite alternate;
+            transition: box-shadow 0.3s ease;
+        }
+        .news-item:hover, .tools-item:hover {
+            box-shadow: 0 0 15px rgba(255, 0, 0, 1), 0 0 20px rgba(0, 255, 0, 1), 0 0 25px rgba(0, 0, 255, 1);
+        }
+        .news-item h3, .tools-item h3 {
+            margin: 0 0 10px;
+            color: #f0ad4e;
+            animation: glowing-text 2s ease-in-out infinite alternate;
+        }
+        .news-item p, .tools-item p {
+            margin: 0 0 10px;
+        }
+        .tools-item a {
+            color: #f0ad4e;
+            text-decoration: none;
+        }
+        .tools-item a:hover {
+            text-decoration: underline;
+        }
+        footer {
+            background-color: #161b22;
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+            color: #c9d1d9;
+            border-top: 3px solid transparent;
+            box-shadow: 0 0 10px rgba(240, 173, 78, 0.6);
+        }
+        @keyframes glowing {
+            0% { color: red; }
+            25% { color: blue; }
+            50% { color: green; }
+            75% { color: yellow; }
+            100% { color: purple; }
+        }
+
+        @keyframes glowing-border {
+            0% { box-shadow: 0 0 15px rgba(255, 0, 0, 0.8); }
+            25% { box-shadow: 0 0 15px rgba(0, 255, 0, 0.8); }
+            50% { box-shadow: 0 0 15px rgba(0, 0, 255, 0.8); }
+            75% { box-shadow: 0 0 15px rgba(255, 255, 0, 0.8); }
+            100% { box-shadow: 0 0 15px rgba(255, 0, 255, 0.8); }
+        }
+
+        @keyframes glowing-text {
+            0% { color: red; }
+            25% { color: green; }
+            50% { color: blue; }
+            75% { color: yellow; }
+            100% { color: violet; }
+        }
+
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>DarkWeb News</h1>
+    <p>Stay updated with the latest tech and hacking insights</p>
+</header>
+
+<div class="container">
+    <!-- Latest News Section -->
+    <section class="latest-news">
+        <h2>Latest News</h2>
+
+        <!-- News Item -->
+        <div class="news-item">
+            <h3>New Exploits Found in IoT Devices</h3>
+            <p>Security researchers have uncovered vulnerabilities in smart home devices, potentially allowing remote access to users' data. Stay informed to protect your systems.</p>
+            <p><a href="https://www.cybernews.com/" target="_blank">Read more</a></p>
+        </div>
+
+        <div class="news-item">
+            <h3>Rise of AI in Cybersecurity</h3>
+            <p>Artificial Intelligence is reshaping how hackers and security teams operate. Discover how AI is used for both offensive and defensive strategies.</p>
+            <p><a href="https://www.csoonline.com/" target="_blank">Read more</a></p>
+        </div>
+    </section>
+
+    <!-- Trending Tools Section -->
+    <section class="trending-tools">
+        <h2>Trending Tools</h2>
+
+        <!-- Tool Item -->
+        <div class="tools-item">
+            <h3>Kali Linux</h3>
+            <p>A complete ethical hacking toolkit for penetration testing, forensics, and network analysis.</p>
+            <p><a href="https://www.kali.org/" target="_blank">Visit Official Page</a></p>
+        </div>
+
+        <div class="tools-item">
+            <h3>Metasploit</h3>
+            <p>A powerful tool used to find, exploit, and validate vulnerabilities within systems.</p>
+            <p><a href="https://www.metasploit.com/" target="_blank">Visit Official Page</a></p>
+        </div>
+
+        <div class="tools-item">
+            <h3>Wireshark</h3>
+            <p>A network protocol analyzer that captures and inspects packets in real-time for debugging and troubleshooting.</p>
+            <p><a href="https://www.wireshark.org/" target="_blank">Visit Official Page</a></p>
+        </div>
+    </section>
+
+    <!-- DarkWeb Insights Section -->
+    <section class="insights">
+        <h2>DarkWeb Insights</h2>
+
+        <div class="news-item">
+            <h3>Dark Web Marketplaces</h3>
+            <p>Discover the hidden marketplaces where tools and data are exchanged, but beware of ethical and legal implications.</p>
+            <p><a href="https://darkwebnews.com/" target="_blank">Learn more</a></p>
+        </div>
+
+        <div class="news-item">
+            <h3>Ransomware Trends</h3>
+            <p>Ransomware remains one of the biggest threats in 2024. Learn how hackers target organizations and how to defend against it.</p>
+            <p><a href="https://www.trendmicro.com/" target="_blank">Learn more</a></p>
+        </div>
+    </section>
+</div>
+
+<footer>
+    <p>&copy; 2024 DarkWeb News | Owned by EMMY HENZ</p>
+</footer>
+
+</body>
+</html>
